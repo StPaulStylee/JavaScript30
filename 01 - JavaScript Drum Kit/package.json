@@ -1,0 +1,14 @@
+{
+  "name": "js_drum_kit",
+  "version": "1.0.0",
+  "description": "A pure JavaScript Application that plays drum sounds when you hit the corresponding keys.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeffrey Miller (from tutorial by Wes Box)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
