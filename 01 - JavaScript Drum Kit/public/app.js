@@ -21,6 +21,7 @@ function playSound(e) {
 
 //  find all elements with a class of .key and return them
 const keys = document.querySelectorAll('.key');
+console.log('keys: ', keys);
 
 // the e or "event" parameter is coming from the transitionend event listener
 function removeTransition(e) {
