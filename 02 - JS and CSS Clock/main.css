@@ -43,3 +43,13 @@ body {
     transform: rotate(90deg);
     transition: all 0.33s;
     transition-timing-function: cubic-bezier(0.69, 0.61, 0.5, 2.32);
+}
+
+.hand.hour-hand {
+  left: 15%;
+  width: 35%;
+}
+
+.hand.second-hand {
+  background: red;
+}
