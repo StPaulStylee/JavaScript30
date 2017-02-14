@@ -16,6 +16,12 @@ function setDate() {
   minuteHand.style.transform = `rotate(${currentMinute}deg)`;
   hourHand.style.transform = `rotate(${currentHour}deg)`;
   console.log(seconds, minutes, hours);
+
+  // Stop the transition so the minute hand doesn't go counter clockwise
+  // when transitioning from 59 sec to 0 sec
+  if (seconds == 0) {
+    secondHand.style.transition = 'none';
+  }
 }
 
 setInterval(setDate, 1000);
