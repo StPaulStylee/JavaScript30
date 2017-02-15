@@ -1,6 +1,8 @@
 const secondHand = document.querySelector('.second-hand');
 const minuteHand = document.querySelector('.min-hand');
 const hourHand = document.querySelector('.hour-hand');
+const tickMarkContainer = document.querySelector('.tick-marks-container');
+const tickMark = document.querySelector('.tick-mark');
 
 function setDate() {
   const now = new Date();
@@ -15,7 +17,7 @@ function setDate() {
   secondHand.style.transform = `rotate(${currentSecond}deg)`;
   minuteHand.style.transform = `rotate(${currentMinute}deg)`;
   hourHand.style.transform = `rotate(${currentHour}deg)`;
-  console.log(seconds, minutes, hours);
+  // console.log(seconds, minutes, hours);
 
   // Stop the transition so the minute hand doesn't go counter clockwise
   // when transitioning from 59 sec to 0 sec
@@ -24,4 +26,16 @@ function setDate() {
   }
 }
 
+function createTickMarks() {
+  for (let i = 0; i < 59; i++) {
+    let newTick = tickMark.cloneNode();
+    console.log(newTick, i);
+    tickMarkContainer.append(newTick);
+
+  }
+  
+}
+
+createTickMarks();
 setInterval(setDate, 1000);
+setDate();
