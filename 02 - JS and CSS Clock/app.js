@@ -24,16 +24,20 @@ function setDate() {
   if (seconds == 0) {
     secondHand.style.transition = 'none';
   }
+  if (seconds > 0){
+    secondHand.style.transition = 'all 0.33s';
+  }
 }
 
 function createTickMarks() {
-  for (let i = 0; i < 59; i++) {
+  for (let i = 1; i < 12; i++) {
     let newTick = tickMark.cloneNode();
-    console.log(newTick, i);
     tickMarkContainer.append(newTick);
+    let tickDegree = ((360 / 12) * i) + 90;
+    console.log(tickDegree, i);
+    newTick.style.transform = `rotate(${tickDegree}deg) translateX(-15px)`;
 
   }
-  
 }
 
 createTickMarks();
