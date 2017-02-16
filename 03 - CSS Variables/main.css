@@ -1,3 +1,22 @@
+/*root allows us to declare CSS variables. the root keyword is a sort of scope,
+in this ,case root refers to the html document*/
+:root {
+  /* We are declaring our variables here */
+  --base: #961010;
+  --spacing: 10px;
+  --blur: 10px;
+}
+
+img {
+  /*Now, our padding on our image is based of our padding variable */
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
+}
+
+.hl {
+  color: var(--base);
+}
 
 body {
   text-align: center;
