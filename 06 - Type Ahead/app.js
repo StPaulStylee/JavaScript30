@@ -17,6 +17,15 @@ function locationSearch(locationToFind, cities) {
 function displayLocations() {
   const matchedLocation = locationSearch(this.value, cities);
   console.table(matchedLocation);
+  const displayHTML = matchedLocation.map(place => {
+    return `
+      <li>
+        <span class="name">${place.city}, ${place.state}</span>
+        <span class="population">${place.population}</span>
+      </li>
+    `;
+  }).join('');
+  searchSuggestions.innerHTML = displayHTML;
 }
 
 
